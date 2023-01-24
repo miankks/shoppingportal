@@ -5,7 +5,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import OuStore from './pages/OuStore';
+import OurStore from './pages/OurStore';
 import Blog from './pages/Blog';
 import CompareProduct from './pages/CompareProduct';
 import Wishlist from './pages/Wishlist';
@@ -38,7 +38,7 @@ function App() {
             <Route path='contact' element={<Contact />} />
             <Route path='forgotpassword' element={<Forgotpassword />} />
             <Route path='login' element={<Login />} />
-            <Route path='ourstore' element={<OuStore />} />
+            <Route path='product' element={<OurStore />} />
             <Route path='privacypolicy' element={<Privacypolicy />} />
             <Route path='product/:id' element={<SingleProduct />} />
             <Route path='resetpassword' element={<Resetpassword />} />

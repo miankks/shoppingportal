@@ -6,7 +6,7 @@ import ProductCard from '../components/ProductCard'
 import Colors from '../components/Colors';
 import Container from '../components/Container';
 
-const OuStore = () => {
+const OurStore = () => {
   let [grid, setGrid] = useState(4);
   return (
     <>
@@ -134,7 +134,8 @@ const OuStore = () => {
                 <div className='d-flex justify-content-between align-items-center'>
                   <div className='d-flex align-items-center gap-10'>
                     <p className='mb-0 d-block sort-text'>Sort by</p>
-                    <select name="" id="" className='form-control form-select'>
+                    <select name="" id="" defaultValue={'default'} className='form-control form-select'>
+                      <option value="default" disabled>Choose an option</option>
                       <option value="manual">Featured</option>
                       <option value="best-selling">Best Selling</option>
                       <option value="title-ascending">Alphabetical A-Z</option>
@@ -148,10 +149,10 @@ const OuStore = () => {
                   <div className='d-flex align-items-center gap-10'>
                     <p className="total-products mb-0">21 Products</p>
                     <div className="d-flex gap-10 align-items-center grid">
-                      <img onClick={() => { setGrid(3)}} src="images/gr4.svg" alt="grid" className='d-block img-fluid'/>
-                      <img onClick={() => { setGrid(4)}} src="images/gr3.svg" alt="grid2" className='d-block img-fluid'/>
-                      <img onClick={() => { setGrid(6)}} src="images/gr2.svg" alt="grid3" className='d-block img-fluid'/>
-                      <img onClick={() => { setGrid(12)}} src="images/gr.svg" alt="grid4" className='d-block img-fluid'/>
+                      <img onClick={() => { setGrid(3)}} src="/images/gr4.svg" alt="grid" className='d-block img-fluid'/>
+                      <img onClick={() => { setGrid(4)}} src="/images/gr3.svg" alt="grid2" className='d-block img-fluid'/>
+                      <img onClick={() => { setGrid(6)}} src="/images/gr2.svg" alt="grid3" className='d-block img-fluid'/>
+                      <img onClick={() => { setGrid(12)}} src="/images/gr.svg" alt="grid4" className='d-block img-fluid'/>
                     </div>
                   </div>
                 </div>
@@ -168,4 +169,4 @@ const OuStore = () => {
   )
 }
 
-export default OuStore
+export default OurStore

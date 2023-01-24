@@ -76,7 +76,7 @@ const Cart = () => {
             </div>
             <div className="col-12 py-2 mt-4">
               <div className="d-flex justify-content-between align-items-baseline">
-                <Link to='/ourstore' className='button'>Continue to shopping</Link>
+                <Link to='/product' className='button'>Continue to shopping</Link>
               <div className='d-flex flex-column justify-content-end'>
                 <h4>Subtotal: $ 100</h4>
                 <p>Taxes and shipping calculateed at checkout</p>

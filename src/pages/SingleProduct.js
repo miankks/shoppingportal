@@ -5,13 +5,15 @@ import Metahead from '../components/Metahead';
 import PopularProducts from '../components/PopularProducts';
 import ReactImageZoom from 'react-image-zoom';
 import Color from '../components/Colors'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { TbGitCompare } from 'react-icons/tb';
 import { AiOutlineHeart } from 'react-icons/ai';
 import Container from '../components/Container';
+import ProductCard from '../components/ProductCard';
 
 const SingleProduct = () => {
-  const props = {width: 400, height: 500, zoomWidth: 600, isFluidWidth: true ,img: "/images/watch1.jpg"}
+  const props = {width: 400, height: 500, zoomWidth: 600, isFluidWidth: true ,img: "/images/watch1.jpg"};
+  let location = useLocation();
   const [orderedProduct, setOrderedProduct] = useState(true);
   const copyToClipboard = (text) => {
     console.log('text', text);
@@ -132,7 +134,7 @@ const SingleProduct = () => {
                   </div>
                   <div className='d-flex gap-10 align-items-center my-3'>
                     <h3 className='product-heading'>Copy product link: </h3>
-                    <a href="javascript:void(0);" onClick={() => copyToClipboard('/images/watch.jpg')}>
+                    <a href="dangerouslySetInnerHTML:void(0);" onClick={() => copyToClipboard('/images/watch.jpg')}>
                       Product Link
                     </a>
                   </div>
@@ -227,15 +229,10 @@ const SingleProduct = () => {
             </div>
           </div>
           <div className="row">
-          <div className="col-2">
-              <div className="card"></div>
-            </div>
-            <div className="col-2">
-              <div className="card"></div>
-            </div>
-            <PopularProducts />
-            <PopularProducts />
-            <PopularProducts />
+            <ProductCard />
+            {/* <PopularProducts /> */}
+            {/* <PopularProducts /> */}
+            {/* <PopularProducts /> */}
           </div>
       </Container>
     </>
